@@ -807,4 +807,5 @@ footer .menu ul li a {
     .navbar-col ul li {
         padding: 10px;
     }
+    .collectionbg {display: none !important;}
 }
