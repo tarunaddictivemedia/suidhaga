@@ -771,7 +771,21 @@ footer .menu ul li a {
         fill: #fff;
         stroke: #fff;
     }
-    
+    .row.collectionbuttonright ul.blockbtn li a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .row.collectionbuttonright ul.blockbtn li a svg {
+        margin-left: 2px;
+    }
+    .handcraftedwithlove .row ul.blockbtn li {
+        margin: 6px 0;
+    }
+    .handcraftedwithlove .row ul.blockbtn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .navbar-col ul li a {
         font-size: 16px;
         line-height: 1.4;
