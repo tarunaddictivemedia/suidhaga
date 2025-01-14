@@ -785,7 +785,9 @@ footer .menu ul li a {
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .exclusiveeventsection .wrappercontent {
+        padding: 4rem 2rem;
+    }
     .navbar-col ul li a {
         font-size: 16px;
         line-height: 1.4;
