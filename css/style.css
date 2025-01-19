@@ -636,11 +636,11 @@ header.siteheader .logo svg path {
     opacity: 0; /* Fade out */
     pointer-events: none; /* Prevent interaction */
 }
-.row.collectionbuttonright ul.blockbtn li a, .buttonright .button {
+.row.collectionbuttonright ul.blockbtn li a, .buttonright .button, .handcraftedwithlove .row ul.blockbtn li a {
     border: none;
     position: relative;
 }
-.row.collectionbuttonright ul.blockbtn li a:after, .buttonright .button:after {
+.row.collectionbuttonright ul.blockbtn li a:after, .buttonright .button:after, .handcraftedwithlove .row ul.blockbtn li a:after {
     transition: 0.5s ease-in-out;
     content: "";
     width: 0;
@@ -653,7 +653,7 @@ header.siteheader .logo svg path {
 .buttonright .button:after {
     bottom: -5px;
 }
-.row.collectionbuttonright ul.blockbtn li a:hover:after, .buttonright .button:hover:after {
+.row.collectionbuttonright ul.blockbtn li a:hover:after, .buttonright .button:hover:after, .handcraftedwithlove .row ul.blockbtn li a:before {
     width: 100%;
 }
 @media(max-width: 1440px) {
