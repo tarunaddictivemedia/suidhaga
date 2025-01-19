@@ -599,8 +599,63 @@ header.siteheader .logo svg path {
 .row.collectionbuttonright ul.blockbtn li:first-child a svg path {
     stroke: #3C2D22;
 }
+.handcraft_header_title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+  }
 
-
+.handcraft_header_title .line {
+    display: inline-block;
+    transform: translateY(100%);
+}
+.handcraft_header_description span {
+    display: inline-block;
+    overflow: hidden;
+    transform: translateY(100%);
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #D7B369;
+}
+.preloader .loaderinnr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+/* Hidden state */
+.preloader.hidden {
+    opacity: 0; /* Fade out */
+    pointer-events: none; /* Prevent interaction */
+}
+.row.collectionbuttonright ul.blockbtn li a, .buttonright .button {
+    border: none;
+    position: relative;
+}
+.row.collectionbuttonright ul.blockbtn li a:after, .buttonright .button:after {
+    transition: 0.5s ease-in-out;
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background: #981d1d;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.buttonright .button:after {
+    bottom: -5px;
+}
+.row.collectionbuttonright ul.blockbtn li a:hover:after, .buttonright .button:hover:after {
+    width: 100%;
+}
 @media(max-width: 1440px) {
     html{
         font-size: 80%;
