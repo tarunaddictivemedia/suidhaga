@@ -112,47 +112,32 @@ document.querySelectorAll(".handcraft_header_description").forEach((description)
   });
 });
 
-// GSAP Animation with Timeline and ScrollTrigger
+
+// GSAP Animation with ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Select the paragraph containing the spans
-document.querySelectorAll(".testimonaltext").forEach((text) => {
-  // Create a GSAP timeline
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: text, // Trigger animation when .testimonaltext comes into view
-      start: "top 80%", // Start when the element is 80% into the viewport
-      end: "bottom 20%", // End when it leaves 20% of the viewport
-      toggleActions: "restart none none none", // Replay animation on re-entering
-    },
-  });
+document.querySelectorAll(".contentwrap").forEach((description) => {
+  const spanss = description.querySelectorAll(".testimonaltext"); // Select all spans inside the description
 
-  // Animate each span in sequence
-  tl.fromTo(
-    text.querySelector(".textspan1"),
-    { y: "50", opacity: 0 }, // Start position
-    { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
-    "-=0.8" // Delay between animations
-  )
-    .fromTo(
-      text.querySelector(".textspan2"),
-      { y: "50", opacity: 0 }, // Start position
-      { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
-      "-=0.5" // Delay between animations
-    )
-    .fromTo(
-      text.querySelector(".textspan3"),
-      { y: "50", opacity: 0 }, // Start position
-      { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
-      "-=0.3"
-    )
-    .fromTo(
-      text.querySelector(".textspan4"),
-      { y: "50", opacity: 0 }, // Start position
-      { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
-      "-=0.1"
+  spanss.forEach((span, index) => {
+    gsap.fromTo(
+      span,
+      { y: "100%" }, // Start position
+      {
+        y: "0%", // End position
+        duration: 2 + index * 0.5, // Staggered duration based on index
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: description,
+          start: "top 80%", // Trigger when the element is 80% into view
+          end: "bottom 20%", // End when the element is 20% out of view
+          toggleActions: "restart none none none", // Replay animation on enter
+        },
+      }
     );
+  });
 });
+
 
 document.querySelectorAll(".contentwrap").forEach((title) => {
     gsap.fromTo(
@@ -191,30 +176,30 @@ const tl = gsap.timeline({
 tl.fromTo(
   wrapperContent.querySelector("h6"),
   { y: 50, opacity: 0 }, // Start position and opacity
-  { y: 0, opacity: 1, duration: 1, ease: "power3.out" } // End position and opacity
+  { y: 0, opacity: 1, duration: 0.2, ease: "power3.out" } // End position and opacity
 )
   .fromTo(
     wrapperContent.querySelector("h2"),
     { y: 50, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+    { y: 0, opacity: 1, duration: 0.2, ease: "power3.out" },
     "-=0.5" // Overlap timing for smoother transitions
   )
   .fromTo(
     wrapperContent.querySelector("p"),
     { y: 50, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" },
+    { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" },
     "-=0.5"
   )
   .fromTo(
     wrapperContent.querySelector(".btndesign"),
     { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.8, ease: "back.out(1.7)" },
+    { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" },
     "-=0.8"
   )
   .fromTo(
     wrapperContent.querySelector(".button"),
     { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.8, ease: "back.out(1.7)" },
+    { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" },
     "-=0.6"
   );
 
@@ -238,7 +223,7 @@ const tll = gsap.timeline({
 tll.fromTo(
   contactFooter.querySelectorAll("p"),
   { opacity: 0, y: 20 }, // Start position and opacity
-  { opacity: 1, y: 0, duration: 1, ease: "power3.out", stagger: 0.3 } // Animate sequentially with stagger
+  { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: 0.3 } // Animate sequentially with stagger
 )
 .fromTo(
 contactFooter.querySelector(".sign img"),
