@@ -944,4 +944,10 @@ header.siteheader .logo svg path {
     .foundermessage .contentwrap p {
         font-size: 18px;
     }
+    .mainbanner {
+        padding-top: 40rem;
+    }
+    .contentbanner .heading {
+        padding-bottom: 12rem;
+    }
 }
