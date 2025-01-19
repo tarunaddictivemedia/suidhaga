@@ -68,7 +68,217 @@ $(document).ready(function() {
     });
 });
 
+document.querySelectorAll(".handcraft_header_title").forEach((title) => {
+    gsap.fromTo(
+      title.querySelector(".line"),
+      { y: "100%" }, // Start position
+      {
+        y: "0%", // End position
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 80%", // Trigger when the h2 is 80% into view
+          end: "bottom 20%", // End when the h2 is 20% out of view
+          toggleActions: "play none none reset", // Replay animation on enter
+        },
+      }
+    );
+});
 
 
+// GSAP Animation with ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+document.querySelectorAll(".handcraft_header_description").forEach((description) => {
+  const spans = description.querySelectorAll("span"); // Select all spans inside the description
+
+  spans.forEach((span, index) => {
+    gsap.fromTo(
+      span,
+      { y: "100%" }, // Start position
+      {
+        y: "0%", // End position
+        duration: 2 + index * 0.5, // Staggered duration based on index
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: description,
+          start: "top 80%", // Trigger when the element is 80% into view
+          end: "bottom 20%", // End when the element is 20% out of view
+          toggleActions: "restart none none none", // Replay animation on enter
+        },
+      }
+    );
+  });
+});
+
+// GSAP Animation with Timeline and ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// Select the paragraph containing the spans
+document.querySelectorAll(".testimonaltext").forEach((text) => {
+  // Create a GSAP timeline
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: text, // Trigger animation when .testimonaltext comes into view
+      start: "top 80%", // Start when the element is 80% into the viewport
+      end: "bottom 20%", // End when it leaves 20% of the viewport
+      toggleActions: "restart none none none", // Replay animation on re-entering
+    },
+  });
+
+  // Animate each span in sequence
+  tl.fromTo(
+    text.querySelector(".textspan1"),
+    { y: "50", opacity: 0 }, // Start position
+    { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
+    "-=0.8" // Delay between animations
+  )
+    .fromTo(
+      text.querySelector(".textspan2"),
+      { y: "50", opacity: 0 }, // Start position
+      { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
+      "-=0.5" // Delay between animations
+    )
+    .fromTo(
+      text.querySelector(".textspan3"),
+      { y: "50", opacity: 0 }, // Start position
+      { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
+      "-=0.3"
+    )
+    .fromTo(
+      text.querySelector(".textspan4"),
+      { y: "50", opacity: 0 }, // Start position
+      { y: "0%", opacity: 1, duration: 0.4, ease: "power3.out" },
+      "-=0.1"
+    );
+});
+
+document.querySelectorAll(".contentwrap").forEach((title) => {
+    gsap.fromTo(
+      title.querySelector("h6"),
+      { y: "100%" }, // Start position
+      {
+        y: "0%", // End position
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 80%", // Trigger when the h2 is 80% into view
+          end: "bottom 20%", // End when the h2 is 20% out of view
+          toggleActions: "restart none none none", // Replay animation on enter
+        },
+      }
+    );
+});
+
+// GSAP Animation for Wrapper Content
+gsap.registerPlugin(ScrollTrigger);
+
+const wrapperContent = document.querySelector(".wrappercontent");
+
+// Create a timeline for sequential animations
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: wrapperContent, // Start animation when .wrappercontent comes into view
+    start: "top 80%", // Trigger at 80% of the viewport
+    end: "bottom 20%", // End when it leaves 20% of the viewport
+    toggleActions: "restart none none none", // Replay animation on re-enter
+  },
+});
+
+// Add animations for each child element
+tl.fromTo(
+  wrapperContent.querySelector("h6"),
+  { y: 50, opacity: 0 }, // Start position and opacity
+  { y: 0, opacity: 1, duration: 1, ease: "power3.out" } // End position and opacity
+)
+  .fromTo(
+    wrapperContent.querySelector("h2"),
+    { y: 50, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+    "-=0.5" // Overlap timing for smoother transitions
+  )
+  .fromTo(
+    wrapperContent.querySelector("p"),
+    { y: 50, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" },
+    "-=0.5"
+  )
+  .fromTo(
+    wrapperContent.querySelector(".btndesign"),
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.8, ease: "back.out(1.7)" },
+    "-=0.8"
+  )
+  .fromTo(
+    wrapperContent.querySelector(".button"),
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.8, ease: "back.out(1.7)" },
+    "-=0.6"
+  );
+
+
+// GSAP Animation for Contact Footer
+gsap.registerPlugin(ScrollTrigger);
+
+const contactFooter = document.querySelector(".contactfooter");
+
+// Create a GSAP timeline for sequential animations
+const tll = gsap.timeline({
+  scrollTrigger: {
+    trigger: contactFooter, // Start animation when .contactfooter comes into view
+    start: "top 80%", // Trigger at 80% of the viewport
+    end: "bottom 20%", // End when it leaves 20% of the viewport
+    toggleActions: "restart none none none", // Replay animation on re-enter
+  },
+});
+
+// Animate each paragraph and the signature image
+tll.fromTo(
+  contactFooter.querySelectorAll("p"),
+  { opacity: 0, y: 20 }, // Start position and opacity
+  { opacity: 1, y: 0, duration: 1, ease: "power3.out", stagger: 0.3 } // Animate sequentially with stagger
+)
+.fromTo(
+contactFooter.querySelector(".sign img"),
+{ opacity: 0, scale: 0.8, y: 20 }, // Start with scaling down and below position
+{ opacity: 1, scale: 1, y: 0, duration: 1, ease: "back.out(1.7)" } // Animate with a bounce effect
+);
+
+
+// GSAP Animation for Copyrights Section
+gsap.registerPlugin(ScrollTrigger);
+
+const copyrights = document.querySelector(".copyrights");
+
+// Create a GSAP timeline for sequential animations
+const cpr = gsap.timeline({
+  scrollTrigger: {
+    trigger: copyrights, // Start animation when .copyrights comes into view
+    start: "top 90%", // Trigger when near the bottom of the viewport
+    end: "bottom 20%", // End when near the top
+    toggleActions: "restart none none none", // Replay animation on re-enter
+  },
+});
+
+// Animate the left content
+cpr.fromTo(
+  copyrights.querySelector(".row"),
+  { opacity: 0, y: 50 }, // Start below with opacity 0
+  { opacity: 1, y: 0, duration: 1, ease: "power3.out" } // Animate into place
+);
+
+
+$(document).ready(function () {
+    // Wait for 3 seconds, then fade out the preloader
+    setTimeout(function () {
+      $(".preloader").fadeOut(500, function () {
+        $(this).remove(); // Optionally remove the preloader from the DOM after fading out
+      });
+    }, 2000); // 3000ms = 3 seconds
+});
+  
+  
 
 
