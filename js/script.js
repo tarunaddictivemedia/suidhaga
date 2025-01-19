@@ -176,30 +176,30 @@ const tl = gsap.timeline({
 tl.fromTo(
   wrapperContent.querySelector("h6"),
   { y: 50, opacity: 0 }, // Start position and opacity
-  { y: 0, opacity: 1, duration: 0.2, ease: "power3.out" } // End position and opacity
+  { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" } // End position and opacity
 )
   .fromTo(
     wrapperContent.querySelector("h2"),
     { y: 50, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.2, ease: "power3.out" },
+    { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
     "-=0.5" // Overlap timing for smoother transitions
   )
   .fromTo(
     wrapperContent.querySelector("p"),
     { y: 50, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" },
+    { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
     "-=0.5"
   )
   .fromTo(
     wrapperContent.querySelector(".btndesign"),
     { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" },
+    { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.7)" },
     "-=0.8"
   )
   .fromTo(
     wrapperContent.querySelector(".button"),
     { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" },
+    { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.7)" },
     "-=0.6"
   );
 
@@ -261,7 +261,7 @@ $(document).ready(function () {
       $(".preloader").fadeOut(500, function () {
         $(this).remove(); // Optionally remove the preloader from the DOM after fading out
       });
-    }, 2000); // 3000ms = 3 seconds
+    }, 1000); // 3000ms = 3 seconds
 });
   
   
