@@ -231,7 +231,7 @@ img {
 .row.collectionbuttonright ul.blockbtn {
     display: flex;
 }
-.row.collectionbuttonright ul.blockbtn li a {
+.row.collectionbuttonright ul.blockbtn li a, .traditioncontent .button, .storysuidhagaa ul.blockbtn li a  {
     font-size: 18px;
     color: #8B0000;
     text-transform: uppercase;
@@ -241,7 +241,7 @@ img {
     text-decoration: none;
     margin-left: 20px;
 }
-.row.collectionbuttonright ul.blockbtn li a svg {
+.row.collectionbuttonright ul.blockbtn li a svg, .traditioncontent .button svg, .storysuidhagaa ul.blockbtn li a svg {
     margin-left: 10px;
 }
 .row.collectionbuttonright ul.blockbtn li:first-child a {
@@ -285,7 +285,7 @@ img {
     padding-bottom: 6rem;
 }
 
-.handcraftedwithlove .row ul.blockbtn {
+.handcraftedwithlove .row ul.blockbtn, .storysuidhagaa ul.blockbtn {
     display: flex;
     justify-content: flex-end;
 }
@@ -636,16 +636,18 @@ header.siteheader .logo svg path {
     opacity: 0; /* Fade out */
     pointer-events: none; /* Prevent interaction */
 }
-.row.collectionbuttonright ul.blockbtn li a, .buttonright .button, .handcraftedwithlove .row ul.blockbtn li a {
+.row.collectionbuttonright ul.blockbtn li a, .buttonright .button, .handcraftedwithlove .row ul.blockbtn li a, .traditioncontent .button,
+.storysuidhagaa ul.blockbtn li a {
     border: none;
     position: relative;
 }
-.row.collectionbuttonright ul.blockbtn li a:after, .buttonright .button:after, .handcraftedwithlove .row ul.blockbtn li a:after {
+.row.collectionbuttonright ul.blockbtn li a:after, .buttonright .button:after, .handcraftedwithlove .row ul.blockbtn li a:after, .traditioncontent .button:after,
+.storysuidhagaa ul.blockbtn li a:after {
     transition: 0.5s ease-in-out;
     content: "";
     width: 0;
     height: 1.5px;
-    background: #981d1d;
+    background: #8B0000;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -653,9 +655,283 @@ header.siteheader .logo svg path {
 .buttonright .button:after {
     bottom: -5px;
 }
-.row.collectionbuttonright ul.blockbtn li a:hover:after, .buttonright .button:hover:after, .handcraftedwithlove .row ul.blockbtn li a:before {
+.row.collectionbuttonright ul.blockbtn li a:hover:after, .buttonright .button:hover:after, 
+.handcraftedwithlove .row ul.blockbtn li a:hover:after, .traditioncontent .button:hover:after,
+.storysuidhagaa ul.blockbtn li a:hover:after {
     width: 100%;
 }
+
+/* Start: Contact Page Css */
+.pd-14 {
+    padding-top: 14rem;
+}
+.contactpagesection .contactrow h6 {
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    opacity: 0.5;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.contactpagesection .contactrow h2, .contactforminnr h2 {
+    font-size: 3rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #8B0000;
+    margin-bottom: 5rem;
+    font-weight: 100;
+}
+
+.contactpagesection .contactrow h4 {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.4;
+    color: #8B0000;
+    margin-bottom: 3.125rem;
+}
+
+.contactpagesection .contactrow ul li {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 12px;
+    font-family: 'Inter';
+}
+
+.contactpagesection .contactrow ul {
+    margin-bottom: 5rem;
+}
+
+.contactpagesection .contactrow ul li span {
+    display: inline-block;
+    margin-left: 20px;
+}
+.col-5 {width: 50%;}
+.contactforminnr {
+    padding: 4rem 3rem;
+}
+.contactform {
+    border-radius: 6px;
+}
+.contactforminnr h2 {
+    margin-bottom: 4rem;
+}
+.contactforminnr .inputform input, .contactforminnr .inputform textarea {
+    background: transparent;
+    font-size: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Inter';
+    width: 100%;
+}
+.contactforminnr .inputform {
+    margin-bottom: 2rem;
+}
+.contactforminnr .inputform textarea {
+    height: 10rem;
+}
+.contactforminnr .inputform button {
+    border-radius: 4px;
+    background: #582616;
+    color: #fff;
+    padding: 12px 34px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'ivy-presto';
+}
+.contactform {
+    position: sticky;
+    top: 0;
+}
+.contactpagesection .row {
+    justify-content: space-between;
+}
+.footebelowsec .marquee p {
+	color: #000000;
+	font-size: 12.5rem;
+	white-space: nowrap;
+	padding: 2rem 0 4rem;
+}
+/* End: Contact Page Css */
+
+/* Start: About Us Page Css */
+.traditionelegance .image img {
+    width: 100%;
+}
+.traditionelegance .row {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+.traditioncontent h6 {
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #000;
+    opacity: 0.5;
+    margin-bottom: 3rem;
+}
+.traditioncontent h2 {
+    font-size: 3rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #8B0000;
+    margin-bottom: 5rem;
+    font-weight: 100;
+}
+.storysuidhagaa {
+    padding-top: 17rem;
+}
+.storysuidhagaa p {
+    font-family: 'ivy-presto';
+    font-size: 2.6rem;
+    line-height: 1.4;
+    color: #000;
+    font-weight: 300;
+    font-style: italic;
+}
+.storysuidhagaa p span:first-child {
+    color: #8B0000;
+    text-decoration: underline;
+}
+.storysuidhagaa .blockbtn {
+    padding-top: 6rem;
+}
+.col-third {
+    width: calc(100% / 3 );
+    padding: 10px;
+}
+.countbox {
+    background: #F2E8D3;
+    border-radius: 4px;
+    padding-bottom: 3.2rem;
+}
+.countbox .count {
+    font-size: 23rem;
+    color: #B7986D;
+    opacity: 0.1;
+    line-height: 0.9;
+    margin-bottom: 3rem;
+}
+.countbox h6 {
+    font-size: 1.75rem;
+    line-height: 1;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 0 1.75rem;
+    color: #000;
+}
+.countbox h6 span {
+    font-weight: 100;
+    display: block;
+}
+.countbox p {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 300;
+    padding: 0 1.75rem;
+    font-family: 'Inter';
+    color: #000;
+}
+.craftmandrivenluxury {
+    padding-bottom: 8rem;
+    padding-top: 12rem;
+}
+.footebelowsec {
+    background: #F6F4F2;
+    padding: 1rem 0;
+    overflow: hidden;
+}
+.footebelowsec .marquee p {
+    font-family: 'ivy-presto';
+    color: #8B0000;
+    font-weight: 100;
+}
+.meetafounder {
+    padding: 15rem 0 10rem;
+}
+.meetafounder h4 {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-family: 'ivy-presto';
+    color: #8B0000;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+
+}
+.imageright {
+    width: 60%;
+    margin-left: auto;
+}
+.visionmission .video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visionmission .video {
+    height: 100vh;
+    border-radius: 4px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.missionbox ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.missionbox ul li {
+    width: calc(100% / 2);
+    padding-left: 30px;
+}
+
+.missionbox ul li:first-child {
+    width: 60%;
+}
+
+.missionbox ul li:last-child {
+    width: 40%;
+}
+
+.missionbox ul li .image {
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 7rem;
+}
+
+.missionbox ul li  .contnt {
+    padding-bottom: 6rem;
+}
+
+.missionbox ul li .contnt h5 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.missionbox ul li .contnt p {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+section.visionmission {
+    padding-bottom: 6rem;
+}
+/* End: About Us Page Css */
+
 @media(max-width: 1440px) {
     html{
         font-size: 80%;
@@ -671,8 +947,50 @@ header.siteheader .logo svg path {
         font-size: 60%;
     }
 }
-
+@media(max-width: 1025px) {
+    .col-third {
+        width: calc(100% / 2);
+    }
+    .countbox {
+        height: 100%;
+    }
+}
 @media(max-width: 600px) {
+    .visionmission .video {
+        height: auto;
+    }
+    .missionbox {
+        margin-top: 2rem !important;
+    }
+    section.meetafounder {
+        padding: 40px 0;
+    }
+    .imageright {
+        width: 100%;
+    }
+    .row.collectionbuttonright ul.blockbtn li a, .traditioncontent .button, .storysuidhagaa ul.blockbtn li a {
+        font-size: 14px;
+    }
+    .footebelowsec .marquee p {
+        font-size: 8rem;
+    }
+    .image2 {
+        margin-bottom: 3rem;
+    }
+    .missionbox ul li {
+        padding-left: 0px;
+        width: 100% !important;
+    }
+    .missionbox ul {
+        flex-wrap: wrap;
+    }
+    .col-third {
+        width: calc(100% / 1);
+    }
+    .col-third {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .navbar-col {
         display: none;
     }
@@ -711,7 +1029,7 @@ header.siteheader .logo svg path {
         padding-bottom: 30rem;
     }
     
-    .col-6, .col-25, .col-65 {
+    .col-6, .col-25, .col-65, .col-5 {
         width: 100%;
     }
     
@@ -949,5 +1267,11 @@ header.siteheader .logo svg path {
     }
     .contentbanner .heading {
         padding-bottom: 12rem;
+    }
+    .handcraftedwithlove .row ul.blockbtn li {
+        width: 100%;
+    }
+    .handcraftedwithlove .row ul.blockbtn {
+        text-align: center;
     }
 }
