@@ -264,6 +264,65 @@ $(document).ready(function () {
     }, 1000); // 3000ms = 3 seconds
 });
   
-  
 
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".suidhagaddjourney p span", 
+    {
+        opacity: 0.4, 
+        y: 20 
+    }, 
+    {
+        opacity: 1, 
+        y: 0, 
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: ".suidhagaddjourney",
+            start: "top 80%",  // Adjust as necessary
+            end: "bottom 20%",
+            scrub: 1
+        }
+    }
+);
+
+
+
+// GSAP Animation for Wrapper Content
+gsap.registerPlugin(ScrollTrigger);
+
+// Select the parent section and all countbox elements
+const section = document.querySelector(".countersection"); // Assuming ".row" is the section containing the countboxes
+const countboxes = section.querySelectorAll(".countbox");
+
+// Create a ScrollTrigger for the entire section
+ScrollTrigger.create({
+  trigger: section, // Trigger animation when this section comes into view
+  start: "top 80%", // Start animation when the section enters 80% of the viewport
+  onEnter: () => {
+    // Loop through each countbox and animate
+    countboxes.forEach((countbox, i) => {
+      const delay = i * 0.3; // Add a delay for staggered animations
+      gsap.timeline()
+        .fromTo(
+          countbox.querySelector(".count"),
+          { y: 50, opacity: 0 }, // Start position and opacity
+          { y: 0, opacity: 0.1, duration: 0.5, ease: "power3.out", delay: delay } // End position and opacity
+        )
+        .fromTo(
+          countbox.querySelector("h6"),
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+          "-=0.3" // Overlap timing for smoother transitions
+        )
+        .fromTo(
+          countbox.querySelector("p"),
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+          "-=0.3"
+        );
+    });
+  },
+});
 
