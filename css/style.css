@@ -667,11 +667,11 @@ header.siteheader .logo svg path {
 }
 .contactpagesection .contactrow h6 {
     font-family: 'Inter';
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.4;
     color: #000;
     opacity: 0.5;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-weight: 300;
 }
 
@@ -690,7 +690,7 @@ header.siteheader .logo svg path {
     text-transform: uppercase;
     line-height: 1.4;
     color: #8B0000;
-    margin-bottom: 3.125rem;
+    margin-bottom: 1rem;
 }
 
 .contactpagesection .contactrow ul li {
@@ -770,12 +770,12 @@ header.siteheader .logo svg path {
 }
 .traditioncontent h6 {
     font-family: 'Inter';
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.4;
     font-weight: 400;
     color: #000;
     opacity: 0.5;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .traditioncontent h2 {
     font-size: 3rem;
@@ -786,7 +786,7 @@ header.siteheader .logo svg path {
     font-weight: 100;
 }
 .storysuidhagaa {
-    padding-top: 17rem;
+    padding-top: 10rem;
 }
 .storysuidhagaa p {
     font-family: 'ivy-presto';
@@ -841,7 +841,7 @@ header.siteheader .logo svg path {
 }
 .craftmandrivenluxury {
     padding-bottom: 8rem;
-    padding-top: 12rem;
+    padding-top: 8rem;
 }
 .footebelowsec {
     background: #F6F4F2;
@@ -854,7 +854,7 @@ header.siteheader .logo svg path {
     font-weight: 100;
 }
 .meetafounder {
-    padding: 15rem 0 10rem;
+    padding: 8rem 0 8rem;
 }
 .meetafounder h4 {
     font-size: 2rem;
@@ -928,7 +928,7 @@ header.siteheader .logo svg path {
 }
 
 section.visionmission {
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
 }
 /* End: About Us Page Css */
 
