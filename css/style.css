@@ -690,7 +690,7 @@ header.siteheader .logo svg path {
     text-transform: uppercase;
     line-height: 1.4;
     color: #8B0000;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
 
 .contactpagesection .contactrow ul li {
@@ -698,12 +698,12 @@ header.siteheader .logo svg path {
     font-weight: 300;
     line-height: 1.4;
     color: #000;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     font-family: 'Inter';
 }
 
 .contactpagesection .contactrow ul {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .contactpagesection .contactrow ul li span {
