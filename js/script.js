@@ -288,42 +288,53 @@ gsap.fromTo(".suidhagaddjourney p span",
 
 
 
-// GSAP Animation for Wrapper Content
+// Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
 // Select the parent section and all countbox elements
-const section = document.querySelector(".countersection"); // Assuming ".row" is the section containing the countboxes
-const countboxes = section.querySelectorAll(".countbox");
+const section = document.querySelector(".countersection"); // Assuming ".countersection" is the parent section containing countboxes
 
-// Create a ScrollTrigger for the entire section
-ScrollTrigger.create({
-  trigger: section, // Trigger animation when this section comes into view
-  start: "top 80%", // Start animation when the section enters 80% of the viewport
-  onEnter: () => {
-    // Loop through each countbox and animate
-    countboxes.forEach((countbox, i) => {
-      const delay = i * 0.3; // Add a delay for staggered animations
-      gsap.timeline()
-        .fromTo(
-          countbox.querySelector(".count"),
+if (section) {
+  const countboxes = section.querySelectorAll(".countbox"); // Select all countbox elements inside the section
+
+  // Create a ScrollTrigger for the entire section
+  ScrollTrigger.create({
+    trigger: section, // Trigger animation when this section comes into view
+    start: "top 80%", // Start animation when the top of the section enters 80% of the viewport
+    onEnter: () => {
+      // Loop through each countbox and animate
+      countboxes.forEach((countbox, i) => {
+        const delay = i * 0.3; // Add a delay for staggered animations
+        const timeline = gsap.timeline();
+
+        // Animate the count element
+        timeline.fromTo(
+          countbox.querySelector(".count"), // Target the count element
           { y: 50, opacity: 0 }, // Start position and opacity
-          { y: 0, opacity: 0.1, duration: 0.5, ease: "power3.out", delay: delay } // End position and opacity
-        )
-        .fromTo(
-          countbox.querySelector("h6"),
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", delay: delay } // End position and opacity
+        );
+
+        // Animate the h6 element
+        timeline.fromTo(
+          countbox.querySelector("h6"), // Target the h6 element
           { y: 50, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
           "-=0.3" // Overlap timing for smoother transitions
-        )
-        .fromTo(
-          countbox.querySelector("p"),
+        );
+
+        // Animate the paragraph element
+        timeline.fromTo(
+          countbox.querySelector("p"), // Target the paragraph element
           { y: 50, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
           "-=0.3"
         );
-    });
-  },
-});
+      });
+    },
+  });
+}
+
+
 
 $(".mommentscapturedslider").slick({
   slidesToScroll: 1,
@@ -412,30 +423,37 @@ if (sectioncollege) {
 // Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
-// Select the parent section and all countbox elements
+// Select the parent section and all heading box elements
 const collegeboxes = document.querySelector(".imageboxes"); // Assuming ".imageboxes" is the container
-const boxhead = collegeboxes.querySelectorAll(".headingboximg"); // All headingbox elements
+if (collegeboxes) {
+  const boxhead = collegeboxes.querySelectorAll(".headingboximg"); // All headingboximg elements
 
-// Check if the elements are selected correctly
-console.log(collegeboxes, boxhead);
+  // Check if the elements are selected correctly
+  console.log(collegeboxes, boxhead);
 
-ScrollTrigger.create({
-  trigger: collegeboxes, // Trigger animation when this section comes into view
-  start: "top 80%", // Start animation when the section enters 80% of the viewport
-  onEnter: () => {
-    // Loop through each heading box and animate
-    boxhead.forEach((headbox, k) => {
-      const delay = k * 0.3; // Add a delay for staggered animations
+  // Create a ScrollTrigger instance
+  ScrollTrigger.create({
+    trigger: collegeboxes, // Trigger animation when this section comes into view
+    start: "top 80%", // Start animation when the section enters 80% of the viewport
+    onEnter: () => {
+      // Loop through each heading box and animate
+      boxhead.forEach((headbox, k) => {
+        const delay = k * 0.3; // Add a delay for staggered animations
 
-      // Use gsap.fromTo directly
-      gsap.fromTo(
-        headbox.querySelector("h3"), // Target the h3 inside each headingbox
-        { y: 50, opacity: 0 }, // Start position and opacity
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: delay } // End position and opacity
-      );
-    });
-  },
-});
+        // Use gsap.fromTo directly
+        const h3Element = headbox.querySelector("h3");
+        if (h3Element) {
+          gsap.fromTo(
+            h3Element, // Target the h3 inside each headingbox
+            { y: 50, opacity: 0 }, // Start position and opacity
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: delay } // End position and opacity
+          );
+        }
+      });
+    },
+  });
+} 
+
 
 // Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
@@ -536,3 +554,57 @@ ScrollTrigger.create({
     });
   },
 });
+
+
+// Ensure GSAP and ScrollTrigger are registered
+gsap.registerPlugin(ScrollTrigger);
+
+// Select the section and its elements
+const traditionSection = document.querySelector(".traditionelegance");
+
+if (traditionSection) {
+  const traditionContent = traditionSection.querySelector(".traditioncontent");
+  const traditionHeading = traditionContent.querySelector("h6");
+  const traditionSubheading = traditionContent.querySelector("h2");
+  const blockBtns = traditionSection.querySelectorAll(".blockbtn li");
+  const traditionParagraph = traditionSection.querySelector(".col-2 p");
+
+  ScrollTrigger.create({
+    trigger: traditionSection, // Trigger animation when this section comes into view
+    start: "top 80%", // Start when the top of the section enters 80% of the viewport
+    onEnter: () => {
+      // Animate heading and subheading
+      gsap.timeline()
+        .fromTo(
+          traditionHeading,
+          { y: 50, opacity: 0 }, // Start position and opacity
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" } // End position and opacity
+        )
+        .fromTo(
+          traditionSubheading,
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+          "-=0.3" // Overlap timing for smooth transitions
+        );
+
+      // Animate buttons with staggered effect
+      gsap.fromTo(
+        blockBtns,
+        { y: 50, opacity: 0 }, // Start position and opacity
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.2 }, // Staggered animation
+        "-=0.3"
+      );
+
+      // Animate the paragraph
+      gsap.fromTo(
+        traditionParagraph,
+        { y: 50, opacity: 0 }, // Start position and opacity
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", delay: 0.2 } // End position and opacity
+      );
+    },
+  });
+}
+
+
+
+
