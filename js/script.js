@@ -255,15 +255,14 @@ cpr.fromTo(
 );
 
 
-$(document).ready(function () {
-    // Wait for 3 seconds, then fade out the preloader
-    setTimeout(function () {
-      $(".preloader").fadeOut(500, function () {
-        $(this).remove(); // Optionally remove the preloader from the DOM after fading out
-      });
-    }, 1000); // 3000ms = 3 seconds
-});
-  
+
+// Wait for 3 seconds, then fade out the preloader
+setTimeout(function () {
+  $(".preloader").fadeOut(500, function () {
+    $(this).remove(); // Optionally remove the preloader from the DOM after fading out
+  });
+}, 1000); // 3000ms = 3 seconds
+
 
 
 
@@ -326,3 +325,214 @@ ScrollTrigger.create({
   },
 });
 
+$(".mommentscapturedslider").slick({
+  slidesToScroll: 1,
+  centerMode: false,
+  centerPadding: 0,
+  initialSlide: 3,
+  variableWidth: true,
+  prevArrow: $(".prev"),
+  nextArrow: $(".next"),
+});
+
+
+// Register ScrollTrigger plugin once
+gsap.registerPlugin(ScrollTrigger);
+
+// Animation for Wrapper Content in the ".traditionelegance" section
+const sectionlegance = document.querySelector(".traditionelegance");
+if (sectionlegance) {
+  const countboxeslegance = sectionlegance.querySelectorAll(".traditioncontent");
+
+  ScrollTrigger.create({
+    trigger: sectionlegance, // Correct trigger reference
+    start: "top 80%", // Start animation when the section enters 80% of the viewport
+    onEnter: () => {
+      countboxeslegance.forEach((countboxlegance, i) => {
+        const delay = i * 0.3; // Stagger animations
+        gsap.timeline()
+          .fromTo(
+            countboxlegance.querySelector("h6"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", delay: delay }
+          )
+          .fromTo(
+            countboxlegance.querySelector("h2"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+            "-=0.3" // Overlap timing for smooth transitions
+          )
+          .fromTo(
+            countboxlegance.querySelector(".button"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+            "-=0.3"
+          );
+      });
+    },
+  });
+}
+
+// Animation for Wrapper Content in the ".imageboxes" section
+const sectioncollege = document.querySelector(".imageboxes");
+if (sectioncollege) {
+  const imageanimated = sectioncollege.querySelectorAll(".imagefirstcollege");
+
+  ScrollTrigger.create({
+    trigger: sectioncollege, // Correct trigger reference
+    start: "top 80%", // Start animation when the section enters 80% of the viewport
+    onEnter: () => {
+      imageanimated.forEach((imageanimate, i) => {
+        const delay = i * 0.3; // Stagger animations
+        gsap.timeline()
+          .fromTo(
+            imageanimate.querySelector(".imageleft"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", delay: delay }
+          )
+          .fromTo(
+            imageanimate.querySelector(".imagecenter"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+            "-=0.3" // Overlap timing for smooth transitions
+          )
+          .fromTo(
+            imageanimate.querySelector(".imageright"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+            "-=0.3"
+          );
+      });
+    },
+  });
+}
+
+
+
+// Ensure GSAP and ScrollTrigger are registered
+gsap.registerPlugin(ScrollTrigger);
+
+// Select the parent section and all countbox elements
+const collegeboxes = document.querySelector(".imageboxes"); // Assuming ".imageboxes" is the container
+const boxhead = collegeboxes.querySelectorAll(".headingboximg"); // All headingbox elements
+
+// Check if the elements are selected correctly
+console.log(collegeboxes, boxhead);
+
+ScrollTrigger.create({
+  trigger: collegeboxes, // Trigger animation when this section comes into view
+  start: "top 80%", // Start animation when the section enters 80% of the viewport
+  onEnter: () => {
+    // Loop through each heading box and animate
+    boxhead.forEach((headbox, k) => {
+      const delay = k * 0.3; // Add a delay for staggered animations
+
+      // Use gsap.fromTo directly
+      gsap.fromTo(
+        headbox.querySelector("h3"), // Target the h3 inside each headingbox
+        { y: 50, opacity: 0 }, // Start position and opacity
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: delay } // End position and opacity
+      );
+    });
+  },
+});
+
+// Ensure GSAP and ScrollTrigger are registered
+gsap.registerPlugin(ScrollTrigger);
+
+// Animation for Wrapper Content in the ".imageboxes" section
+const Imagesblocks = document.querySelector(".imageboxes");
+if (Imagesblocks) {
+  const blockanimate = Imagesblocks.querySelectorAll(".Imagesblocks");
+
+  ScrollTrigger.create({
+    trigger: Imagesblocks, // Correct trigger reference
+    start: "top 80%", // Start animation when the section enters 80% of the viewport
+    onEnter: () => {
+      blockanimate.forEach((blockanima, m) => {
+        const delay = m * 0.3; // Stagger animations
+        gsap.timeline()
+          .fromTo(
+            blockanima.querySelector(".imageleft"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: delay }
+          )
+          .fromTo(
+            blockanima.querySelector(".imagecenter"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+            "-=0.3" // Overlap timing for smooth transitions
+          )
+          .fromTo(
+            blockanima.querySelector(".imageright"),
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+            "-=0.3"
+          );
+      });
+    },
+  });
+}
+
+
+// GSAP Animation for Wrapper Content
+gsap.registerPlugin(ScrollTrigger);
+
+// Select the parent section and all countbox elements
+const craftmandrivenluxury = document.querySelector(".craftmandrivenluxury"); // Assuming ".row" is the craftmandrivenluxury containing the countboxes
+const craftmandrivenheading = craftmandrivenluxury.querySelectorAll(".headingbox");
+
+// Create a ScrollTrigger for the entire craftmandrivenluxury
+ScrollTrigger.create({
+  trigger: craftmandrivenluxury, // Trigger animation when this section comes into view
+  start: "top 80%", // Start animation when the section enters 80% of the viewport
+  onEnter: () => {
+    // Loop through each countbox and animate
+    craftmandrivenheading.forEach((head, j) => {
+      const delay = j * 0.3; // Add a delay for staggered animations
+      gsap.timeline()
+        .fromTo(
+          head.querySelector("h2"),
+          { y: 50, opacity: 0 }, // Start position and opacity
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", delay: delay } // End position and opacity
+        )
+        .fromTo(
+          head.querySelector("p"),
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+          "-=0.3" // Overlap timing for smoother transitions
+        );
+    });
+  },
+});
+
+// GSAP Animation for Wrapper Content
+gsap.registerPlugin(ScrollTrigger);
+
+// Select the parent section and all countbox elements
+const mommentscaptured = document.querySelector(".mommentscaptured"); // Assuming ".row" is the mommentscaptured containing the countboxes
+const heading = mommentscaptured.querySelectorAll(".headingbox");
+
+// Create a ScrollTrigger for the entire mommentscaptured
+ScrollTrigger.create({
+  trigger: mommentscaptured, // Trigger animation when this section comes into view
+  start: "top 80%", // Start animation when the section enters 80% of the viewport
+  onEnter: () => {
+    // Loop through each countbox and animate
+    heading.forEach((head, j) => {
+      const delay = j * 0.3; // Add a delay for staggered animations
+      gsap.timeline()
+        .fromTo(
+          head.querySelector("h2"),
+          { y: 50, opacity: 0 }, // Start position and opacity
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", delay: delay } // End position and opacity
+        )
+        .fromTo(
+          head.querySelector("p"),
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+          "-=0.3" // Overlap timing for smoother transitions
+        );
+    });
+  },
+});
