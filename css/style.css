@@ -638,12 +638,12 @@ header.siteheader .logo svg path {
     pointer-events: none; /* Prevent interaction */
 }
 .row.collectionbuttonright ul.blockbtn li a, .buttonright .button, .handcraftedwithlove .row ul.blockbtn li a, .traditioncontent .button,
-.storysuidhagaa ul.blockbtn li a, .blockbtn li a {
+.storysuidhagaa ul.blockbtn li a, .blockbtn li a, .collectionboxesContent a.button, .contentslide a.button  {
     border: none;
     position: relative;
 }
 .row.collectionbuttonright ul.blockbtn li a:after, .buttonright .button:after, .handcraftedwithlove .row ul.blockbtn li a:after, .traditioncontent .button:after,
-.storysuidhagaa ul.blockbtn li a:after, .blockbtn li a:after {
+.storysuidhagaa ul.blockbtn li a:after, .blockbtn li a:after, .collectionboxesContent a.button:after, .contentslide a.button:after {
     transition: 0.5s ease-in-out;
     content: "";
     width: 0;
@@ -656,9 +656,12 @@ header.siteheader .logo svg path {
 .buttonright .button:after {
     bottom: -5px;
 }
+.collectionboxesContent a.button, .contentslide a.button {
+    padding-bottom: 10px;
+}
 .row.collectionbuttonright ul.blockbtn li a:hover:after, .buttonright .button:hover:after, 
 .handcraftedwithlove .row ul.blockbtn li a:hover:after, .traditioncontent .button:hover:after,
-.storysuidhagaa ul.blockbtn li a:hover:after, .blockbtn li a:hover:after {
+.storysuidhagaa ul.blockbtn li a:hover:after, .blockbtn li a:hover:after, .collectionboxesContent a.button:hover:after, .contentslide a.button:hover:after {
     width: 100%;
 }
 
@@ -981,7 +984,7 @@ section.visionmission {
     text-align: center;margin-bottom: 4.25rem;max-width: 50rem;margin-left: auto;margin-right: auto;
 }
 .craftmandrivenluxury .headingbox h2, .mommentscaptured .headingbox h2 {    
-    font-size: 3rem;
+    font-size: 2rem;
     /* font-style: italic; */
     line-height: 1.4;
     color: #8B0000;
@@ -1066,6 +1069,140 @@ button.next {
     filter: none;
 }
 /* End: Collection Details Page */
+/* Start: collection Listing Page */
+.collectionlistheader .row {
+    text-align: left;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 17px;
+}
+.col-2 {
+    width: 20%;
+}
+.collectionlistheader .row p {
+    font-size: 18px;
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 1.6;
+}
+.collectionlistheader ul.blockbtn li a {
+    margin-left: 0;
+    margin-right: 50px;
+}
+.collectionlistheader ul.blockbtn li a span {
+    opacity: 0.8;
+}
+.collectionlistheader .Video video {
+    width: 100%;
+}
+.collectionboxes .collectionBlock .row {
+    margin-top: 8rem;
+}
+.collectionboxes .collectionBlock .row h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: #8B0000;
+    margin-bottom: 2rem;
+    font-weight: 100;
+}
+.collectionboxes .collectionBlock .row p {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: 'Inter';
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+.collectionboxesContent a.button {
+    text-transform: uppercase;
+    color: #8B0000;
+    font-size: 18px;
+    text-decoration: none;
+}
+.collectionboxes .collectionBlock .row .col-5 {
+    padding: 0 30px;
+}
+.collectionboxes .collectionBlock .row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.collectionboxesContent .content {
+    height: 85%;
+}
+.collectionboxes {
+    padding-bottom: 11rem;
+}
+.glimpselegacy {
+    padding: 0 3.2rem;
+}
+.glimpselegacy .container {
+    background: #F2E8D3;
+    padding: 8rem 0 6rem;
+    text-align: center;
+}
+.glimpselegacy .headingbox h6 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+.glimpselegacy .headingbox h2 {
+    font-size: 3rem;
+    color: #8B0000;
+    line-height: 1.4;
+    font-weight: 100;
+    max-width: 35rem;
+    margin: 0 auto;
+}
+.glimpselegacyinnr .img {
+    height: 40rem;
+}
+.glimpselegacyinnr .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.glimpselegacyslider {
+    margin-top: 60px;
+}
+.glimpselegacyslider .slick-slide {
+    height: auto;
+}
+.glimpselegacyinnr .contentslide h4 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.4;
+    align-items: center;
+    color: #8B0000;
+}
+.glimpselegacyinnr .contentslide {
+    padding: 30px 10px;
+    display: none;
+}
+.glimpselegacyinnr .contentslide h4 a.button {
+    font-size: 18px;
+    color: #8B0000;
+    line-height: 1.4;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.slick-slide.slick-current.slick-active.slick-center .glimpselegacyinnr .contentslide {
+    display: block;
+}
+.glimpselegacy {
+    margin-bottom: 7rem;
+}
+.collectionBlock img {
+    filter: grayscale();
+}
+.collectionBlock img:hover {
+    filter: none;
+}
+/* End: Collection Listing Page */
+
 
 @media(max-width: 1440px) {
     html{
@@ -1088,6 +1225,37 @@ button.next {
     }
     .countbox {
         height: 100%;
+    }
+    .collectionlistheader .col-6 {
+        width: 100%;
+        text-align: center;
+    }
+    .collectionlistheader .col-6 ul.blockbtn {
+        justify-content: center;
+        margin-bottom: 40px;
+    }    
+    .collectionlistheader .col-6 h6 {
+        font-size: 14px;
+    }
+    .collectionlistheader .col-2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width: 769px) {
+    .collectionBlock .col-3, .collectionBlock .col-5 {
+        width: 100%;
+        padding: 0px !important;
+    }
+    .collectionboxesContent .content {
+        height: auto;
+    }    
+    .collectionboxesContent {
+        margin-bottom: 50px;
+    }
+    .collectionboxes .collectionBlock .row .col-2 {
+        display: none;
     }
 }
 @media(max-width: 600px) {
@@ -1446,6 +1614,43 @@ button.next {
         padding-bottom: 0rem;
     }
     .imageboxes img {
+        filter: none;
+    }
+    .glimpselegacy {
+        padding: 0;
+    }
+    .glimpselegacy .headingbox h2 {
+        font-size: 2.5rem;;
+    }
+    .collectionlistheader .col-6 ul.blockbtn li {
+        margin-bottom: 14px;
+    }
+    .collectionlistheader .col-6 ul.blockbtn {
+        flex-wrap: wrap;
+    }
+    .collectionlistheader .col-6 ul.blockbtn li a{
+        margin-right: 10px;
+    }
+    .glimpselegacyinnr .contentslide {
+        padding: 20px 10px;
+    }
+    .glimpselegacy .container {
+        padding: 4rem 0 0rem;
+    }
+    .glimpselegacyslider {
+        margin-top: 30px;
+    }
+    .glimpselegacyslider {
+        margin-top: 30px;
+    }
+    .collectionboxes .collectionBlock .row {
+        margin-top: 4rem;
+    }
+    .collectionlistheader .col-6 ul.blockbtn {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .collectionBlock img {
         filter: none;
     }
 }
