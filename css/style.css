@@ -25,7 +25,7 @@ body {
 p {
     font-family: Inter;
 }
-.foundermessage .contentwrap p, .row.collectionbuttonright ul.blockbtn li a {
+.foundermessage .contentwrap p, .row.collectionbuttonright ul.blockbtn li a, .blockbtn li a {
     font-family: 'ivy-presto', sans-serif;
 }    
 a, a img, img {
@@ -228,10 +228,10 @@ img {
     padding-bottom: 10rem;
     justify-content: right;
 }
-.row.collectionbuttonright ul.blockbtn {
+.row.collectionbuttonright ul.blockbtn, .blockbtn {
     display: flex;
 }
-.row.collectionbuttonright ul.blockbtn li a, .traditioncontent .button, .storysuidhagaa ul.blockbtn li a  {
+.row.collectionbuttonright ul.blockbtn li a, .traditioncontent .button, .storysuidhagaa ul.blockbtn li a, .blockbtn li a  {
     font-size: 18px;
     color: #8B0000;
     text-transform: uppercase;
@@ -241,7 +241,7 @@ img {
     text-decoration: none;
     margin-left: 20px;
 }
-.row.collectionbuttonright ul.blockbtn li a svg, .traditioncontent .button svg, .storysuidhagaa ul.blockbtn li a svg {
+.row.collectionbuttonright ul.blockbtn li a svg, .traditioncontent .button svg, .storysuidhagaa ul.blockbtn li a svg, .blockbtn li a svg {
     margin-left: 10px;
 }
 .row.collectionbuttonright ul.blockbtn li:first-child a {
@@ -370,14 +370,14 @@ img {
     text-align: center;
 }
 
-.exclusiveeventsection .wrappercontent {padding: 6rem 0 6rem;background: #E7D7B3;}
+.exclusiveeventsection .wrappercontent {padding: 4rem 0 4rem;background: #E7D7B3;}
 
 .exclusiveeventsection .wrappercontent h6 {
     font-size: 1rem;
     color: #000;
     font-family: Inter;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .exclusiveeventsection .wrappercontent h2 {
@@ -385,6 +385,7 @@ img {
     font-weight: 300;
     margin-bottom: 20px;
     color: #000;
+    line-height: 1.2;
 }
 
 .exclusiveeventsection .wrappercontent p {
@@ -637,12 +638,12 @@ header.siteheader .logo svg path {
     pointer-events: none; /* Prevent interaction */
 }
 .row.collectionbuttonright ul.blockbtn li a, .buttonright .button, .handcraftedwithlove .row ul.blockbtn li a, .traditioncontent .button,
-.storysuidhagaa ul.blockbtn li a {
+.storysuidhagaa ul.blockbtn li a, .blockbtn li a {
     border: none;
     position: relative;
 }
 .row.collectionbuttonright ul.blockbtn li a:after, .buttonright .button:after, .handcraftedwithlove .row ul.blockbtn li a:after, .traditioncontent .button:after,
-.storysuidhagaa ul.blockbtn li a:after {
+.storysuidhagaa ul.blockbtn li a:after, .blockbtn li a:after {
     transition: 0.5s ease-in-out;
     content: "";
     width: 0;
@@ -657,7 +658,7 @@ header.siteheader .logo svg path {
 }
 .row.collectionbuttonright ul.blockbtn li a:hover:after, .buttonright .button:hover:after, 
 .handcraftedwithlove .row ul.blockbtn li a:hover:after, .traditioncontent .button:hover:after,
-.storysuidhagaa ul.blockbtn li a:hover:after {
+.storysuidhagaa ul.blockbtn li a:hover:after, .blockbtn li a:hover:after {
     width: 100%;
 }
 
@@ -677,7 +678,7 @@ header.siteheader .logo svg path {
 
 .contactpagesection .contactrow h2, .contactforminnr h2 {
     font-size: 3rem;
-    font-style: italic;
+    /* font-style: italic; */
     line-height: 1.4;
     color: #8B0000;
     margin-bottom: 5rem;
@@ -932,6 +933,141 @@ section.visionmission {
 }
 /* End: About Us Page Css */
 
+/* Start: Collection Details Page */
+.imagefirstcollege {
+    padding-top: 9rem;
+    justify-content: space-between;
+}
+.imagefirstcollege .imageleft{
+    width: 33.33%
+}
+.imagefirstcollege .imagecenter{
+    width: 33.33%;
+    margin-top: 7rem;
+}
+.imagefirstcollege .imageright{
+    width: 15%;
+    margin-left: 0px;
+}
+.imageboxes .heading {
+    padding: 10rem 0 6rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: 0%;
+}
+.imageboxes .heading h3 {
+    color: #8B0000;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.Imagesblocks {
+    justify-content: space-between;
+}
+.Imagesblocks .imageleft {
+    width: 33.33%;
+}
+.Imagesblocks .imagecenter {
+    width: 15%;
+    margin-top: 8rem;
+}
+.Imagesblocks .imageright {
+    width: 33.33%;
+    margin-left: 0px;
+    margin-top: 13rem;
+}
+.craftmandrivenluxury .headingbox {
+    text-align: center;margin-bottom: 4.25rem;max-width: 50rem;margin-left: auto;margin-right: auto;
+}
+.craftmandrivenluxury .headingbox h2, .mommentscaptured .headingbox h2 {    
+    font-size: 3rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: #8B0000;
+    margin-bottom: 2rem;
+    font-weight: 100;
+}
+.craftmandrivenluxury .headingbox p, .mommentscaptured .headingbox p {    
+    color: #8B0000;
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: 'Inter';
+    font-weight: 300;
+}
+.mommentscaptured {
+    padding-top: 5rem;
+}
+.max-w-500 {
+    max-width: 500;
+}
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.mommentscaptured .blockbtn {
+    justify-content: end;margin-bottom: 4.5rem;
+}
+.mommentscapturedslider {
+    width: 98%;
+    margin-left: auto;
+}
+.mommentscapturedslide {
+    width: 25rem !important; /* Adjust the maximum width of each slide */
+    margin: 0 0; /* Add spacing between slides */
+    height: 40rem;
+}
+.slick-current.slick-active .mommentscapturedslide {
+    width: 50rem !important; /* Adjust the maximum width of each slide */
+    margin: 0 0; /* Add spacing between slides */
+}
+.mommentscapturedslide .mommentscapturedinnr , .mommentscapturedslide .mommentscapturedinnr .img, .mommentscapturedslide .mommentscapturedinnr img{
+    height: 100%;
+    object-fit: cover;width: 100%;    object-position: top;
+}
+.slick-current.slick-active .mommentscapturedslide .mommentscapturedinnr img {
+    object-position: center;
+}
+.mommentscapturedslider .slick-slide {
+    height: auto;
+}
+.mommentscaptured .slider-nav {
+    text-align: right;
+    margin-top: 3rem;
+    margin-bottom: 9rem;
+    padding-right: 4rem;
+}
+.mommentscapturedslide  {
+    padding: 5px;
+}
+.mommentscaptured .slider-nav button {
+    border: 1px solid #8b0000;
+    border-radius: 40px;
+    margin-left: 12px;
+}
+.mommentscaptured .slider-nav button:hover {
+    background: #8b0000;
+}
+.mommentscaptured .slider-nav button:hover path {
+    stroke: #fff;
+}
+.mommentscapturedslider .slick-list {width: 98%; margin-left: auto;}
+button.prev,
+button.next {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.imageboxes img {
+    filter: grayscale();
+}
+.imageboxes img:hover {
+    filter: none;
+}
+/* End: Collection Details Page */
+
 @media(max-width: 1440px) {
     html{
         font-size: 80%;
@@ -968,7 +1104,7 @@ section.visionmission {
     .imageright {
         width: 100%;
     }
-    .row.collectionbuttonright ul.blockbtn li a, .traditioncontent .button, .storysuidhagaa ul.blockbtn li a {
+    .row.collectionbuttonright ul.blockbtn li a, .traditioncontent .button, .storysuidhagaa ul.blockbtn li a, .blockbtn li a {
         font-size: 14px;
     }
     .footebelowsec .marquee p {
@@ -1273,5 +1409,41 @@ section.visionmission {
     }
     .handcraftedwithlove .row ul.blockbtn {
         text-align: center;
+    }
+    .traditioncontent h6 {
+        font-size: 14px;
+    }
+    .countbox h6 {
+        line-height: 1.5;
+    }
+    .missionbox ul li .contnt h5 {
+        font-size: 25px;
+    }
+    .imageboxes .imagecenter, .imageboxes .imageright {
+        display: none;
+    }
+    .imageboxes .imageleft {
+        width: 100%;
+    }
+    .imagefirstcollege {
+        padding-top: 40px;
+    }
+    .imageboxes .heading {
+        width: 100%;
+        padding-top: 5rem;
+    }
+    .mommentscaptured .blockbtn {
+        margin-top: 5rem;
+        justify-content: center;
+    }
+    .slick-current.slick-active .mommentscapturedslide {
+        width: 31rem !important;
+    }
+    .mommentscaptured .slider-nav button svg {
+        width: 16px;
+        height: 16px;
+    }
+    .craftmandrivenluxury {
+        padding-bottom: 0rem;
     }
 }
