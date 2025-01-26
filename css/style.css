@@ -863,7 +863,7 @@ header.siteheader .logo svg path {
     font-family: 'ivy-presto';
     color: #8B0000;
     font-weight: 100;
-    font-style: italic;
+    /* font-style: italic; */
     text-align: center;
     width: 100%;
     margin-bottom: 3rem;
@@ -917,7 +917,7 @@ header.siteheader .logo svg path {
 
 .missionbox ul li .contnt h5 {
     font-weight: 100;
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 1.5rem;
     margin-bottom: 25px;
 }
